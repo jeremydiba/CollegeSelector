@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter a new college or updated data!</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<p>Enter Data for a new College! &nbsp;</p>
+
+<form action="onSubmitPushed" enctype="text/plain" id="NewCollegeForm" name="NewCollegeForm" target="_self">
+    <p>Name of College or University:&nbsp;<input maxlength="50" name="universityName" size="25" type="text" /></p>
+
+    <p>College Website:&nbsp;<input maxlength="100" name="collegeWebsite" size="20" type="url" /></p>
+
+    <p>SAT Average Math&nbsp;<input maxlength="3" name="SATMath" size="3" type="text" />&nbsp;SAT Average Reading&nbsp;<input maxlength="3" name="SATReading" size="3" type="text" /></p>
+
+    <p>ACT Composite Average&nbsp;<input maxlength="2" name="ACTAverage" size="2" type="text" />&nbsp;</p>
+
+    <p>Admission rate (%)&nbsp;<input maxlength="2" name="AdmissionRate" size="2" type="text" />&nbsp;Average GPA (4.0 Max)&nbsp;<input maxlength="4" name="AverageGPA" size="4" type="text" /></p>
+
+    <div>&nbsp;</div>
+
+    <div><input name="SubmitButton" type="submit" value="Submit" /></div>
+</form>
+</body>
+</html>
