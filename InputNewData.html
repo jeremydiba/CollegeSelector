@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <title>Enter a new college or updated data!</title>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script>
+        var universityName, collegeWebsite, satMath, satReading, actAverage, admissionRate, averageGPA;
 
+        $(document).ready(function() {
+            $("#SubmitButton").click(function () {
+                universityName = $("#UniversityName").val();
+                collegeWebsite = $("#CollegeWebsite").val();
+                satMath = $("#SATMath").val();
+                satReading = $("#SATReading").val();
+                actAverage = $("#ACTAverage").val();
+                admissionRate = $("#AdmissionRate").val();
+                averageGPA = $("#AverageGPA").val();
+            });
+        });
+    </script>
 </head>
 <body>
+
 <p>Enter Data for a new College! &nbsp;</p>
 
-<form action="onSubmitPushed" enctype="text/plain" id="NewCollegeForm" name="NewCollegeForm" target="_self">
-    <p>Name of College or University:&nbsp;<input maxlength="50" name="universityName" size="25" type="text" /></p>
+    <p>Name of College or University:&nbsp;<input id="UniversityName" maxlength="50" name="UniversityName" size="25" type="text"  title="UniversityName"/></p>
 
-    <p>College Website:&nbsp;<input maxlength="100" name="collegeWebsite" size="20" type="url" /></p>
+    <p>College Website:&nbsp;<input id="CollegeWebsite" maxlength="100" name="CollegeWebsite" size="20" type="url"  title="CollegeWebsite"/></p>
 
-    <p>SAT Average Math&nbsp;<input maxlength="3" name="SATMath" size="3" type="text" />&nbsp;SAT Average Reading&nbsp;<input maxlength="3" name="SATReading" size="3" type="text" /></p>
+    <p>SAT Average Math&nbsp;<input id="SATMath" maxlength="3" name="SATMath" size="3" type="text"  title="SATMath"/>&nbsp;SAT Average Reading&nbsp;<input id="SATReading" maxlength="3" name="SATReading" size="3" type="text" title="SATReading"/></p>
 
-    <p>ACT Composite Average&nbsp;<input maxlength="2" name="ACTAverage" size="2" type="text" />&nbsp;</p>
+    <p>ACT Composite Average&nbsp;<input id="ACTAverage" maxlength="2" name="ACTAverage" size="2" type="text"  title="ACTAV"/>&nbsp;</p>
 
-    <p>Admission rate (%)&nbsp;<input maxlength="2" name="AdmissionRate" size="2" type="text" />&nbsp;Average GPA (4.0 Max)&nbsp;<input maxlength="4" name="AverageGPA" size="4" type="text" /></p>
+    <p>Admission rate (%)&nbsp;<input id="AdmissionRate" maxlength="2" name="AdmissionRate" size="2" type="text" title="AdmissionRate"/>&nbsp;Average GPA (4.0 Max)&nbsp;<input id="AverageGPA" maxlength="4" name="AverageGPA" size="4" type="text"  title="AverageGPA"/></p>
 
     <div>&nbsp;</div>
 
-    <div><input name="SubmitButton" type="submit" value="Submit" /></div>
-</form>
+    <div><input id="SubmitButton" name="SubmitButton" type="submit" value="Submit" /></div>
+
 </body>
 </html>
