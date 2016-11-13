@@ -5,9 +5,10 @@
     <title>Enter a new college or updated data!</title>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script src="Scripts/university.js"></script>
     <script>
         var universityName, collegeWebsite, satMath, satReading, actAverage, admissionRate, averageGPA;
-
+        var array = [];
         $(document).ready(function() {
             $("#SubmitButton").click(function () {
                 universityName = $("#UniversityName").val();
@@ -17,6 +18,9 @@
                 actAverage = $("#ACTAverage").val();
                 admissionRate = $("#AdmissionRate").val();
                 averageGPA = $("#AverageGPA").val();
+                University = new University(universityName, collegeWebsite, satMath, satReading, actAverage, admissionRate, averageGPA);
+                array.push(University);
+                $("#num").text("Current number of universities is " + array.size);
             });
         });
     </script>
@@ -38,6 +42,6 @@
     <div>&nbsp;</div>
 
     <div><input id="SubmitButton" name="SubmitButton" type="submit" value="Submit" /></div>
-
+    <h2 id = "num"> Current number of universities is </h2>
 </body>
 </html>
